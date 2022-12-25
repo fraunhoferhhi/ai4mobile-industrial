@@ -1,6 +1,6 @@
-![ai4mobile-industrial](pics/ai4m-industrial.png)
-
-# AI4Mobile Industrial Datasets
+# AI4Mobile Industrial Datasets <img src="pics/ai4m-industrial.png" height="120" align="right">
+[![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)][pandas]
+[![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)][numpy]
 
 [Download the datasets on IEEE Dataport](https://ieee-dataport.org/open-access/ai4mobile-industrial-datasets-iv2v-and-iv2i)
 
@@ -14,12 +14,15 @@ In the following, an overview of the data is provided. For a detailed descriptio
 [bagpy]: https://jmscslgroup.github.io/bagpy/index.html
 We strongly recommend to work on Python with the following libraries:
 
-* [pandas](https://pandas.pydata.org/)
+* [pandas]
 * [pyarrow](https://arrow.apache.org/docs/python/index.html)
 
 Furthermore, we suggest some additional libraries to process and analyze the data, such as:
 
-* [numpy](https://numpy.org/) for common mathematical tools
+[numpy]: https://numpy.org/
+[pandas]: https://pandas.pydata.org/
+
+* [numpy] for common mathematical tools
 * [matplotlib](https://matplotlib.org/) for plotting
 * [scikit-learn](https://scikit-learn.org/stable/) for ML analysis
 * [bagpy] for ROS bag files

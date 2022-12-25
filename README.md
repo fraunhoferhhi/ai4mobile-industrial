@@ -6,8 +6,6 @@
 
 We provide 2 datasets: [iV2V](#iv2v) (industrial Vehicle-to-Vehicle) and [iV2I+](#iv2i) (industrial Vehicular-to-Infrastructure + sensor). Both datasets provide information from several sources in different granularity. For ease of use, parquet files containing direct translations of the raw data are provided in respective sources folders.
 
-[TOC]
-
 In the following, an overview of the data is provided. For a detailed description of the measurement campaigns please refer to the paper
 (_Preprint to be published soon_).
 
@@ -129,7 +127,7 @@ Alternatively, RSRP and RSRQ values were logged together with SNR and RSSI direc
 
 [TCP Dump][tcpdump] is a packet analyzer that allows tracking transmitted packets and their properties (e.g. payload, size of the packet).
 
-During the measurement campaign, TCP Dump was run on both server and the mini-PC which was attached to the AGV. This allows reconstructing e.g. the packet delay ($P\_{server} - P\_{agv}$ or $P\_{agv} - P\_{server}$ for Uplink and Downlink, respectively). Since the time synchronization was not running consistently (max. break of 30 min), errors in the area of single-digit ms can be expected using this information.
+During the measurement campaign, TCP Dump was run on both server and the mini-PC which was attached to the AGV. This allows reconstructing e.g. the packet delay ( $P_{server}-P_{agv}$ or $P_{agv}-P_{server}$ for Uplink and Downlink, respectively). Since the time synchronization was not running consistently (max. break of 30 min), errors in the area of single-digit ms can be expected using this information.
 
 The parquet files contain already information from both server and client side and each packet is listed with respective fields if it is either an ICMP, TCP or UDP packet. For the UDP packets also the delay between sending and receiving entity is included, as well as if a packet has arrived. The parquet files are split between Uplink and Downlink and also between the different days.
 
@@ -155,8 +153,8 @@ Sensor data was stored using [ROS] (Robot Operating System) as .bag files, which
 | Topic                     | ROS message type                    | Update period | Description                                             |
 |---------------------------|-------------------------------------|---------------|---------------------------------------------------------|
 | Map static elevation      | [nav_msgs/OccupancyGrid][occupancy] | -             | Single precomputed map of the whole area                |
-| Far map obstacles         | [nav_msgs/OccupancyGrid][occupancy] | **50 ms**     | 400$m^2$ obstacle map around the AGV                    |
-| Near map obstacles        | [nav_msgs/OccupancyGrid][occupancy] | **20 ms**     | 36$m^2$ obstacle map around the AGV                     |
+| Far map obstacles         | [nav_msgs/OccupancyGrid][occupancy] | **50 ms**     | 400 $\mathrm{m}^2$ obstacle map around the AGV                    |
+| Near map obstacles        | [nav_msgs/OccupancyGrid][occupancy] | **20 ms**     |  36 $\mathrm{m}^2$ obstacle map around the AGV                     |
 | Odometry                  | [nav_msgs/Odometry][odom]           | **10 ms**     | Sensor-fused position, orientation and speed of the AGV |
 | Inertial Measurement Unit | [sensor_msgs/Imu][imu]              | **10 ms**     | Conventional IMU data                                   |
 | LIDAR                     | [sensor_msgs/PointCloud2][cloud]    | **100 ms**    | 3D point cloud with obstacles                           |

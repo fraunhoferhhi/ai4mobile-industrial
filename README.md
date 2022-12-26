@@ -171,7 +171,7 @@ The static map and the odometry data are provided in the sources as "static_map"
 It is important to note that "Odometry" does not refer to pure wheel odometry but sensor-fused dead reckoning using other sensor sources, e.g., IMU.
 Within "ros_df", the odometry data has been downsampled to **40 ms** (considering the AGV's low speed and update rate of the communication data) and extended with:
 
-* **distance_to_bs**: The distance to the base station, which was known and fixed to (9,9)
+* **distance_to_bs**: The distance to the base station, whose position was fixed to (9,9).
 * **obstacles_sum**: A summation of the obstacles for Line-of-Sight (LoS) estimation. For this, the elevation values above a small threshold lying within a [Fresnel ellipse](https://en.wikipedia.org/wiki/Fresnel_zone) between AGV and base station were added together. The threshold here serves to neglect the grid values that account for ground.
 * **line_of_sight**: A boolean estimate of LoS, obtained as the condition `obstacles_sum < 1000` (The threshold value "1000" has been selected a posteriori).
 

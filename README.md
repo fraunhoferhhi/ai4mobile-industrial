@@ -1,6 +1,7 @@
 # AI4Mobile Industrial Datasets <img src="pics/ai4m-industrial.png" height="120" align="right">
 [![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)][pandas]
 [![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)][numpy]
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=fff&style=for-the-badge)][jupyter]
 
 [Download the datasets on IEEE Dataport](https://ieee-dataport.org/open-access/ai4mobile-industrial-datasets-iv2v-and-iv2i)
 
@@ -21,8 +22,11 @@ Furthermore, we suggest some additional libraries to process and analyze the dat
 
 [numpy]: https://numpy.org/
 [pandas]: https://pandas.pydata.org/
+[jupyter]: https://jupyter.org/
+
 
 * [numpy] for common mathematical tools
+* [jupyter] to run the interactive examples
 * [matplotlib](https://matplotlib.org/) for plotting
 * [scikit-learn](https://scikit-learn.org/stable/) for ML analysis
 * [bagpy] for ROS bag files
@@ -173,7 +177,9 @@ Within "ros_df", the odometry data has been downsampled to **40 ms** (considerin
 
 These added fields are computed within [odom_parser.py](iV2Ip/odom_parser.py)
 
-# Examples
+# Reference
+
+## Examples
 
 For a complete code example to explore the datasets,
 check the Jupyter notebooks [iV2Ip-visualize.ipynb](iV2Ip/iV2Ip-visualize.ipynb) and
@@ -181,7 +187,16 @@ check the Jupyter notebooks [iV2Ip-visualize.ipynb](iV2Ip/iV2Ip-visualize.ipynb)
 
 ![jupyter-visuals](pics/visualization.png)
 
-# Citation
+## AI4Mobile
+
+AI4Mobile is a research project funded by the Federal Ministry for Education and Research (BMBF), from the announcement
+Artificial Intelligence in Communication Networks within the scope of the High-Tech Strategy of the German Federal Government.
+
+The scope of the project is the study
+of AI-aided wireless systems for mobility in industry and traffic.
+More information at [ai4mobile.org](https://www.ai4mobile.org/en/). 
+
+## Citation
 
 If you use the dataset, please cite it as:
 
@@ -194,3 +209,4 @@ publisher = {IEEE Dataport},
 title = {AI4Mobile Industrial Datasets: iV2V and iV2I+},  
 year = {2022} }
 ```
+![BMBF Logo](pics/bmbf-logo.png)

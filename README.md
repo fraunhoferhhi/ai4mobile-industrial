@@ -209,4 +209,5 @@ publisher = {IEEE Dataport},
 title = {AI4Mobile Industrial Datasets: iV2V and iV2I+},  
 year = {2022} }
 ```
-![BMBF Logo](pics/bmbf-logo.png)
+
+![Project logos](pics/footer-logos.svg)

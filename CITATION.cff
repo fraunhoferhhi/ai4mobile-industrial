@@ -1,0 +1,145 @@
+cff-version: 1.2.0
+message: If you use this dataset, please cite it using the preferred-citation information.
+type: dataset
+license: CC0-1.0
+title: "Support code and documentation for the AI4Mobile industrial datasets: iV2V and iV2I+."
+doi: 10.21227/04ta-v128
+abstract: "We provide 2 datasets: iV2V (industrial Vehicle-to-Vehicle) 
+and iV2I+ (industrial Vehicular-to-Infrastructure + sensor).
+Both datasets provide information from several sources in different granularity.
+For ease of use, parquet files containing direct translations of the raw data
+are provided in respective sources folders."
+authors:
+- family-names: Hernangómez
+  given-names: Rodrigo
+  orcid: https://orcid.org/0000-0002-1284-4951
+  affiliation: Fraunhofer Heinrich Hertz Institute
+- family-names: Palaios
+  given-names: Alexandros
+  affiliation: Ericsson Research
+- family-names: Watermann
+  given-names: Cara
+  affiliation: Ericsson Research
+- family-names: Schäufele
+  given-names: Daniel
+  affiliation: Fraunhofer Heinrich Hertz Institute
+- family-names: Geuer
+  given-names: Philipp
+  affiliation: Ericsson Research
+- family-names: Ismayilov
+  given-names: Rafail
+  affiliation: Fraunhofer Heinrich Hertz Institute
+- family-names: Parvini
+  given-names: Mohammad
+  affiliation: Vodafone Chair, Technische Universität Dresden
+- family-names: Krause
+  given-names: Anton
+  affiliation: Vodafone Chair, Technische Universität Dresden
+- family-names: Kasparick
+  given-names: Martin
+  affiliation: Fraunhofer Heinrich Hertz Institute
+- family-names: Neugebauer
+  given-names: Thomas
+  affiliation: Götting KG
+- family-names: Ramos-Cantor
+  given-names: Oscar D.
+  affiliation: Robert Bosch GmbH
+- family-names: Tchouankem
+  given-names: Hugues
+  affiliation: Robert Bosch GmbH
+- family-names: Leon Calvo
+  given-names: Jose
+  affiliation: Ericsson Research
+- family-names: Chen
+  given-names: Bo
+  affiliation: Enway GmbH
+- family-names: Stanczak
+  given-names: Slawomir
+  affiliation: Fraunhofer Heinrich Hertz Institute
+- family-names: Fettweis
+  given-names: Gerhard
+  affiliation: Vodafone Chair, Technische Universität Dresden
+preferred-citation:
+  type: article
+  title: 'Towards an AI-enabled Connected Industry:
+  AGV Communication and Sensor Measurement Datasets'
+  abstract: 'This paper presents two wireless measurement
+  campaigns in industrial testbeds: industrial Vehicle-to-vehicle (iV2V)
+  and industrial Vehicle-to-infrastructure plus Sensor (iV2I+).
+  Detailed information about the two captured datasets is provided as well.
+  iV2V covers sidelink communication scenarios between Automated Guided Vehicles (AGVs),
+  while iV2I+ is conducted at an industrial setting where an autonomous cleaning
+  robot is connected to a private cellular network. The combination of
+  different communication technologies, together with a common measurement methodology,
+  provides insights that can be exploited by Machine Learning (ML) for tasks
+  such as fingerprinting, line-of-sight detection, prediction of quality of service
+  or link selection. Moreover, the datasets are labelled and pre-filtered for fast
+  on-boarding and applicability. The corresponding testbeds and measurements
+  are also presented in detail for both datasets.'
+  authors:
+    - family-names: Hernangómez
+      given-names: Rodrigo
+      orcid: https://orcid.org/0000-0002-1284-4951
+      affiliation: Fraunhofer Heinrich Hertz Institute
+    - family-names: Palaios
+      given-names: Alexandros
+      affiliation: Ericsson Research
+    - family-names: Watermann
+      given-names: Cara
+      affiliation: Ericsson Research
+    - family-names: Schäufele
+      given-names: Daniel
+      affiliation: Fraunhofer Heinrich Hertz Institute
+    - family-names: Geuer
+      given-names: Philipp
+      affiliation: Ericsson Research
+    - family-names: Ismayilov
+      given-names: Rafail
+      affiliation: Fraunhofer Heinrich Hertz Institute
+    - family-names: Parvini
+      given-names: Mohammad
+      affiliation: Vodafone Chair, Technische Universität Dresden
+    - family-names: Krause
+      given-names: Anton
+      affiliation: Vodafone Chair, Technische Universität Dresden
+    - family-names: Kasparick
+      given-names: Martin
+      affiliation: Fraunhofer Heinrich Hertz Institute
+    - family-names: Neugebauer
+      given-names: Thomas
+      affiliation: Götting KG
+    - family-names: Ramos-Cantor
+      given-names: Oscar D.
+      affiliation: Robert Bosch GmbH
+    - family-names: Tchouankem
+      given-names: Hugues
+      affiliation: Robert Bosch GmbH
+    - family-names: Leon Calvo
+      given-names: Jose
+      affiliation: Ericsson Research
+    - family-names: Chen
+      given-names: Bo
+      affiliation: Enway GmbH
+    - family-names: Stanczak
+      given-names: Slawomir
+      affiliation: Fraunhofer Heinrich Hertz Institute
+    - family-names: Fettweis
+      given-names: Gerhard
+      affiliation: Vodafone Chair, Technische Universität Dresden
+  year: '2022'
+  month: '12'
+  issue: arXiv:2301.03364
+  publisher:
+    name: arXiv
+  doi: 10.48550/arXiv.2301.03364
+  keywords:
+  - Computer Science - Artificial Intelligence
+  - Computer Science - Machine Learning
+  - Computer Science - Networking and Internet Architecture
+repository: https://ieee-dataport.org/open-access/ai4mobile-industrial-wireless-datasets-iv2v-and-iv2i
+repository-code: https://github.com/fraunhoferhhi/ai4mobile-industrial
+url: https://www.ai4mobile.org/en/
+identifiers:
+- description: Paper DOI
+  type: doi
+  value: 10.48550/arXiv.2301.03364

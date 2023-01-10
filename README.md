@@ -7,8 +7,8 @@
 
 We provide 2 datasets: [iV2V](#iv2v) (industrial Vehicle-to-Vehicle) and [iV2I+](#iv2i) (industrial Vehicular-to-Infrastructure + sensor). Both datasets provide information from several sources in different granularity. For ease of use, parquet files containing direct translations of the raw data are provided in respective sources folders.
 
-In the following, an overview of the data is provided. For a detailed description of the measurement campaigns please refer to the paper
-(_Preprint to be published soon_).
+In the following, an overview of the data is provided.
+For a detailed description of the measurement campaigns, please refer to the [paper](https://arxiv.org/abs/2301.03364).
 
 ## Requirements
 
@@ -114,7 +114,7 @@ For detailed information about the columns and information in higher resolution,
 [ping]: https://linux.die.net/man/8/ping
 Sources:
 
-1. [Mobile Insight][mi]
+1. [MobileInsight][mi]
 2. [TCP Dump][tcpdump]
 3. [Iperf]
 4. [Ping]
@@ -122,9 +122,9 @@ Sources:
 
 Except for the Sensor Data, all measurement software is Open Source and free of use.
 
-### Mobile Insight
+### MobileInsight
 
-All information captured by [Mobile Insight][mi] from available LTE channels. The available information also depends on the modem of the measurement device.
+All information captured by [MobileInsight][mi] from available LTE channels. The available information also depends on the modem of the measurement device.
 
 The "rs_intra_all" file contains RSRP and RSRQ information in a resolution of **40 ms** for the measurement campaign.
 
@@ -160,8 +160,8 @@ Sensor data was stored using [ROS] (Robot Operating System) as .bag files, which
 | Topic                     | ROS message type                    | Update period | Description                                             |
 |---------------------------|-------------------------------------|---------------|---------------------------------------------------------|
 | Map static elevation      | [nav_msgs/OccupancyGrid][occupancy] | -             | Single precomputed map of the whole area                |
-| Far map obstacles         | [nav_msgs/OccupancyGrid][occupancy] | **50 ms**     | 400 $\mathrm{m}^2$ obstacle map around the AGV                    |
-| Near map obstacles        | [nav_msgs/OccupancyGrid][occupancy] | **20 ms**     |  36 $\mathrm{m}^2$ obstacle map around the AGV                     |
+| Far map obstacles         | [nav_msgs/OccupancyGrid][occupancy] | **50 ms**     | 400 $\mathrm{m}^2$ obstacle map around the AGV          |
+| Near map obstacles        | [nav_msgs/OccupancyGrid][occupancy] | **20 ms**     | 36 $\mathrm{m}^2$ obstacle map around the AGV           |
 | Odometry                  | [nav_msgs/Odometry][odom]           | **10 ms**     | Sensor-fused position, orientation and speed of the AGV |
 | Inertial Measurement Unit | [sensor_msgs/Imu][imu]              | **10 ms**     | Conventional IMU data                                   |
 | LIDAR                     | [sensor_msgs/PointCloud2][cloud]    | **100 ms**    | 3D point cloud with obstacles                           |
@@ -189,25 +189,36 @@ check the Jupyter notebooks [iV2Ip-visualize.ipynb](iV2Ip/iV2Ip-visualize.ipynb)
 
 ## AI4Mobile
 
-AI4Mobile is a research project funded by the Federal Ministry for Education and Research (BMBF), from the announcement
-Artificial Intelligence in Communication Networks within the scope of the High-Tech Strategy of the German Federal Government.
+AI4Mobile is a research project funded by the
+[Federal Ministry for Education and Research (BMBF)](https://www.bmbf.de/bmbf/en/home/),
+from the announcement
+[Artificial Intelligence in Communication Networks](https://www.forschung-it-sicherheit-kommunikationssysteme.de/foerderung/bekanntmachungen/kikom)
+within the scope of the High-Tech Strategy of the German Federal Government.
 
 The scope of the project is the study
 of AI-aided wireless systems for mobility in industry and traffic.
-More information at [ai4mobile.org](https://www.ai4mobile.org/en/). 
+More information at [ai4mobile.org](https://www.ai4mobile.org/en/).
 
 ## Citation
 
 If you use the dataset, please cite it as:
 
 ```bibtex
-@data{04ta-v128-22,  
-doi = {10.21227/04ta-v128},  
-url = {https://dx.doi.org/10.21227/04ta-v128},  
-author = {Hernangomez, Rodrigo and Palaios, Alexandros and Watermann, Cara and Schäufele, Daniel and Geuer, Philipp and Ismayilov, Rafail and Parvini, Mohammad and Krause, Anton and Kasparick, Martin and Neugebauer, Thomas and Ramos-Cantor, Oscar D. and Tchouankem, Hugues and Leon Calvo, Jose and Chen, Bo and Stanczak, Slawomir and Fettweis, Gerhard},  
-publisher = {IEEE Dataport},  
-title = {AI4Mobile Industrial Datasets: iV2V and iV2I+},  
-year = {2022} }
+@article{hernangomez2022aienabled,
+   title = {Towards an {{AI-enabled Connected Industry}}: {{AGV Communication}} and {{Sensor Measurement Datasets}}},
+   shorttitle = {Towards an {{AI-enabled Connected Industry}}},
+   author = {Hernang{\'o}mez, Rodrigo and Palaios, Alexandros and Watermann, Cara and Sch{\"a}ufele, Daniel and Geuer, Philipp and Ismayilov, Rafail and Parvini, Mohammad and Krause, Anton and Kasparick, Martin and Neugebauer, Thomas and {Ramos-Cantor}, Oscar D. and Tchouankem, Hugues and Calvo, Jose Leon and Chen, Bo and Sta{\'n}czak, S{\l}awomir and Fettweis, Gerhard},
+   year = {2022},
+   month = dec,
+   number = {arXiv:2301.03364},
+   eprint = {2301.03364},
+   eprinttype = {arxiv},
+   primaryclass = {cs},
+   publisher = {{arXiv}},
+   doi = {10.48550/arXiv.2301.03364},
+   archiveprefix = {arXiv},
+   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Networking and Internet Architecture}
+}
 ```
 
 ![Project logos](pics/footer-logos.svg)

@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 from datetime import datetime
 
 
@@ -75,6 +76,52 @@ def plot_map(map_df, ax=None, cmap='Greens'):
     if ax is not None:
         plt.sca(ax)
     plt.imshow(map_df, cmap=cmap, extent=extent_df)
+
+
+def plot_scenario(scen, ax):
+    blue = "#0083ad"
+    green = "#5e9582"
+
+    agv2 = [-170/100, -10/100]
+    agv3 = [(630 + 263)/100, (900 + 251)/100]
+    ax.scatter(agv2[0], agv2[1], s=200, c=green, marker='*', zorder=30, label='AGV 2')
+    ax.scatter(agv3[0], agv3[1], s=100, c=green, marker='s', zorder=30, label='AGV 3')
+
+    # Plot adjacent room
+    rect = patches.Rectangle((7.3, -2.0), 7.85, 12.1, linewidth=1, edgecolor='k', facecolor='#eeeeee')
+    ax.add_patch(rect)
+
+    msize = 8
+    lwidth = 2.5
+
+    if scen == "A":
+        x_values = [(210 + 65)/100, (210 + 65 + 80)/100]
+        y_values = [123/100, 123/100]
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue, label='metal')
+
+        y_values = np.arange(123, 123 + 150, 40)/100
+        x_values = np.ones(len(y_values))*(210 + 65)/100
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue, marker='^', markersize=msize, label='absorber')
+
+        y_values = np.arange(123 + 150, 123 + 300, 40)/100
+        x_values = np.ones(len(y_values))*(210 + 65)/100
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue)
+
+        x_values = np.arange(630 - 210, 630, 60)/100
+        y_values = (np.ones(len(x_values))*(520+380+46))/100
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue, marker='^', markersize=msize)
+    elif scen == "B":
+        x_values = [(210 + 65)/100, (210 + 65 + 80)/100]
+        y_values = [123/100, 123/100]
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue, label='metal')
+
+        x_values = np.ones(7)*(210 + 65)/100
+        y_values = (np.arange(len(x_values))*45+123)/100
+        ax.plot(x_values, y_values, linewidth=lwidth, c=blue, marker='^', markersize=msize, label='absorber')
+    else:
+        raise ValueError(f"Unrecognized scenario '{scen}'")
+
+    ax.legend(loc='lower right', ncol=2, framealpha=1.0)
 
 
 def spatial_avg(df, pos_labels, tile_size, avg_method='mean'):

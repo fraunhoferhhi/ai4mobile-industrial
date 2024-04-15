@@ -8,7 +8,7 @@
 We provide 2 datasets: [iV2V](#iv2v) (industrial Vehicle-to-Vehicle) and [iV2I+](#iv2i) (industrial Vehicular-to-Infrastructure + sensor). Both datasets provide information from several sources in different granularity. For ease of use, parquet files containing direct translations of the raw data are provided in respective sources folders.
 
 In the following, an overview of the data is provided.
-For a detailed description of the measurement campaigns, please refer to the [paper](https://arxiv.org/abs/2301.03364).
+For a detailed description of the measurement campaigns, please refer to the [paper](https://ieeexplore.ieee.org/document/10494952/).
 
 ## Requirements
 
@@ -204,20 +204,22 @@ More information at [ai4mobile.org](https://www.ai4mobile.org/en/).
 If you use the dataset, please cite it as:
 
 ```bibtex
-@article{hernangomez2022aienabled,
-   title = {Towards an {{AI-enabled Connected Industry}}: {{AGV Communication}} and {{Sensor Measurement Datasets}}},
-   shorttitle = {Towards an {{AI-enabled Connected Industry}}},
-   author = {Hernang{\'o}mez, Rodrigo and Palaios, Alexandros and Watermann, Cara and Sch{\"a}ufele, Daniel and Geuer, Philipp and Ismayilov, Rafail and Parvini, Mohammad and Krause, Anton and Kasparick, Martin and Neugebauer, Thomas and {Ramos-Cantor}, Oscar D. and Tchouankem, Hugues and Calvo, Jose Leon and Chen, Bo and Sta{\'n}czak, S{\l}awomir and Fettweis, Gerhard},
-   year = {2022},
-   month = dec,
-   number = {arXiv:2301.03364},
-   eprint = {2301.03364},
-   eprinttype = {arxiv},
-   primaryclass = {cs},
-   publisher = {{arXiv}},
-   doi = {10.48550/arXiv.2301.03364},
-   archiveprefix = {arXiv},
-   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Networking and Internet Architecture}
+@article{hernangomez2024aienabled,
+  title = {Toward an {{AI-Enabled Connected Industry}}: {{AGV Communication}} and {{Sensor Measurement Datasets}}},
+  shorttitle = {Toward an {{AI-Enabled Connected Industry}}},
+  author = {Hernang{\'o}mez, Rodrigo and Palaios, Alexandros and Watermann, Cara and Sch{\"a}ufele, Daniel and Geuer, Philipp and Ismayilov, Rafail and Parvini, Mohammad and Krause, Anton and Kasparick, Martin and Neugebauer, Thomas and {Ramos-Cantor}, Oscar D. and Tchouankem, Hugues and Calvo, Jose Leon and Chen, Bo and Fettweis, Gerhard and Sta{\'n}czak, S{\l}awomir},
+  year = {2024},
+  month = apr,
+  journal = {IEEE Communications Magazine},
+  volume = {62},
+  number = {4},
+  eprint = {2301.03364},
+  primaryclass = {cs},
+  pages = {90--95},
+  issn = {1558-1896},
+  doi = {10.1109/MCOM.001.2300494},
+  copyright = {All rights reserved},
+  keywords = {Artificial intelligence,Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Networking and Internet Architecture,Fingerprint recognition,Line-of-sight propagation,Quality of service,Robot sensing systems,Service robots,Vehicular ad hoc networks,Wireless communication,Wireless sensor networks}
 }
 ```
 
